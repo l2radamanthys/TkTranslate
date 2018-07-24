@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
+
 try:
     from urllib.request import Request, urlopen  # Python 3
     from urllib.parse import urlencode
 except ImportError:
     from urllib2 import Request, urlopen  # Python 2
-    from urllib2.parse import urlencode
+    from urllib import urlencode
 import json
 from const import URL, HEADERS
 

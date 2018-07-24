@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 
 HEADERS = [
     ("Charset", "UTF-8"),
@@ -7,8 +9,8 @@ HEADERS = [
 URL = "https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=qca&dt=rm&dt=bd&dj=1&hl=es-ES&ie=UTF-8&oe=UTF-8&inputm=2&otf=2&iid=1dd3b944-fa62-4b55-b330-74909a99969e"
 
 TRANSLATE_LIST = [
-    'Ingles -> Español', 
-    'Español -> Ingles'
+    u'Ingles -> Español', 
+    u'Español -> Ingles'
 ]
 
 TRANSLATE_TABLE = [

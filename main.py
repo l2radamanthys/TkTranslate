@@ -1,8 +1,8 @@
-
+# -*- coding: utf-8 -*-
 
 try:
     import tkinter as tk
-except ImportErrorr:
+except ImportError:
     import Tkinter as tk
 from application import Application
 

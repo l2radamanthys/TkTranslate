@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
+
 try:
     import tkinter as tk
     from tkinter import ttk
 except ImportError:
     import Tkinter as tk
-    from Tkinter import ttk
+    import ttk
 from const import TRANSLATE_LIST, TRANSLATE_TABLE
 from translate import translate
 
@@ -14,7 +16,10 @@ class Application(ttk.Frame):
         Main app windows
     """
     def __init__(self, master=None):
-        super().__init__(master)
+        try:
+            super().__init__(master)
+        except:
+            ttk.Frame.__init__(self, master)
         self.master = master
         self.pack()
         self.init_ui()
