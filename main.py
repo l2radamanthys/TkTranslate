@@ -2,7 +2,7 @@
 
 try:
     import tkinter as tk
-except ImportError:
+except ImportErrorr:
     import Tkinter as tk
 from application import Application
 
