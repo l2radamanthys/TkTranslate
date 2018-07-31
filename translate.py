@@ -21,7 +21,10 @@ def translate(text, source='es', target='en'):
         request.add_header(key, value)
     data = bytes(urlencode(params).encode())
     try:
-        return json.loads(urlopen(request, data).read().decode('utf-8'))['sentences'][0]['trans']
+        json_ = json.loads(urlopen(request, data).read().decode('utf-8'))
+        # print(json_)
+        # return json_['sentences'][0]['trans'] #old first result only
+        return ''.join(map(lambda e: e['trans'], json_['sentences']))
     except:
         return 'Error al traducir el texto'
 
