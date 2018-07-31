@@ -41,16 +41,24 @@ class Application(ttk.Frame):
         self.combo.grid(row=1, column=2, sticky=tk.W)
         self.input_text = tk.Text(self, height=5)
         self.input_text.grid(row=2, column=1, columnspan=5, padx=5, pady=5)
-        self.output_text = tk.Text(self, height=5)
+        self.output_text = tk.Text(self, state='disabled', height=5)
         self.output_text.grid(row=3, column=1, columnspan=5, padx=5, pady=5)
         self.button = tk.Button(self, text='Traducir', command=self.on_traslate_click, height=2, width=15)
         self.button.grid(row=4, column=5, sticky=tk.E, padx=5, pady=5)
 
 
     def on_traslate_click(self):
+        self.input_text.configure(state='disabled')
+        self.output_text.configure(state='normal')
         source, target = TRANSLATE_TABLE[self.combo.current()]
         raw_text = self.input_text.get("1.0",'end-1c')
         self.output_text.delete(1.0, "end")
+        self.output_text.insert("end", 'Traduciendo texto...')
+        self.output_text.configure(state='disabled')
         result = translate(raw_text, source, target)
+        self.output_text.configure(state='normal')
+        self.output_text.delete(1.0, "end")
         self.output_text.insert("end", result)
+        self.input_text.configure(state='normal')
+        self.output_text.configure(state='disabled')
         #print(options, raw_text)
