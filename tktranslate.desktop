@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Tk Translate
+Comment=Translate Tool
+Exec=python /home/ricardo/Workspace/Python/TkTranslate/main.py
+Icon=fcitx-chttrans-inactive
+Path=/home/ricardo/Workspace/Python/TkTranslate/
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+StartupNotify=false
