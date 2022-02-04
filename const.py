@@ -10,10 +10,14 @@ URL = "https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=q
 
 TRANSLATE_LIST = [
     u'Español -> Ingles',
+    u'Español -> Portugues',
     u'Ingles -> Español',
+    u'Ingles -> Portugues',
 ]
 
 TRANSLATE_TABLE = [
     ('es', 'en'),
+    ('es', 'pt'),
     ('en', 'es'),
+    ('en', 'pt'),
 ]
